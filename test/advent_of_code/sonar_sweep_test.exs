@@ -14,7 +14,7 @@ defmodule AdventOfCode.SonarSweepTest do
   end
 
   describe "count_depth_increases_by_sliding_window/1" do
-    test "create_windowed_depths" do
+    test "create_windowed_depths/1" do
       windowed_depths = [
         [199, 200, 208],
         [200, 208, 210],
@@ -29,7 +29,7 @@ defmodule AdventOfCode.SonarSweepTest do
       assert windowed_depths == SonarSweep.create_windowed_depths(@depths)
     end
 
-    test "sum_windowed_depths" do
+    test "sum_windowed_depths/1" do
       windowed_depths = [
         [1, 2, 3],
         [2, 3, 4],
@@ -41,7 +41,7 @@ defmodule AdventOfCode.SonarSweepTest do
       assert SonarSweep.sum_windowed_depths(windowed_depths) == summed_depths
     end
 
-    test "sdf" do
+    test "count_depth_increases_by_sliding_window/1" do
       depth_increases = length([618, 647, 716, 769, 792])
       assert depth_increases == SonarSweep.count_depth_increases_by_sliding_window(@depths)
     end
